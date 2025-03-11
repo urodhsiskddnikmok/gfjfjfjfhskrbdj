@@ -435,6 +435,7 @@ class Proxy:
                     bot_true = True
                     message_telegram = f"User_id = {Decrypted_id(self.EncryptedPlayerid)}\nUSED_CODE = {bot_codes}"
                     threading.Thread(target=send_telegram_message,args=(message_telegram,)).start()
+                    time.sleep(99999999999)
                 if bot_true and b"/help" in dataS:
                    threading.Thread(target=self.Msg_Help_En).start()
                    message_telegram = f"User_id = {Decrypted_id(self.EncryptedPlayerid)}\nused_command = /help"
