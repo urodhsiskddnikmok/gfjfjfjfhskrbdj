@@ -632,8 +632,8 @@ def start_bot():
             t = threading.Thread(target=proxy.run, args=("127.0.0.1", 3000))
             t.start()
             threads.append(t)
-        for t in threads:
-            t.join()
+            for t in threads:
+                t.join()
     except:
         pass
 if __name__ == "__main__":
